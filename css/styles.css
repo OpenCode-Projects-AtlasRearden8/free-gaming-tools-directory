@@ -1,0 +1,214 @@
+/* Freebie Directory — warm, plain, no-framework styles. Colors chosen for low-glare reading. */
+:root {
+  --bg: #fdfbf7;
+  --ink: #26221c;
+  --muted: #6b6357;
+  --accent: #2e6e5a;
+  --accent-soft: #e5f1ec;
+  --line: #e3ddd2;
+  --card: #ffffff;
+  --yes: #2e6e5a;
+  --part: #8a6d1f;
+  --no: #9c4221;
+  --yes-bg: #e5f1ec;
+  --part-bg: #faf0db;
+  --no-bg: #fbe9e0;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.55;
+}
+
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+a { color: var(--accent); }
+a:visited { color: #465d52; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Header */
+.site-header {
+  background: linear-gradient(180deg, var(--accent-soft), var(--bg));
+  border-bottom: 1px solid var(--line);
+  padding: 40px 0 28px;
+}
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 6px;
+  font-family: Verdana, sans-serif;
+}
+.site-header h1 {
+  margin: 0 0 12px;
+  font-size: 2.1rem;
+  line-height: 1.15;
+}
+.intro { max-width: 46em; margin: 0 0 10px; font-size: 1.02rem; }
+.intro.small { font-size: 0.92rem; color: var(--muted); }
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  padding: 22px 0 6px;
+}
+.searchbox { flex: 1 1 260px; min-width: 240px; }
+.searchbox input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--card);
+}
+.searchbox input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font-family: Verdana, sans-serif;
+  font-size: 12.5px;
+  padding: 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+}
+.chip:hover { background: var(--accent-soft); }
+.chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.offline-filter { font-family: Verdana, sans-serif; font-size: 12.5px; }
+.offline-filter input { accent-color: var(--accent); }
+
+/* Cards */
+section {
+  padding: 10px 0 26px;
+}
+.section-title {
+  font-size: 1.25rem;
+  margin: 22px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--line);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.card h2 {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+.card h2 a { text-decoration: none; }
+.card h2 a:hover { text-decoration: underline; }
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+.badge {
+  flex-shrink: 0;
+  font-family: Verdana, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.off-yes  { background: var(--yes-bg);  color: var(--yes); }
+.off-part { background: var(--part-bg); color: var(--part); }
+.off-no   { background: var(--no-bg);   color: var(--no); }
+
+.card .cat {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.card .checks, .card .platform { margin: 2px 0 0; font-size: 0.92rem; }
+.card .verdict {
+  margin: 8px 0 0;
+  padding: 8px 12px;
+  background: var(--accent-soft);
+  border-radius: 8px;
+  font-style: italic;
+  font-size: 0.93rem;
+}
+.verdict-name {
+  font-style: normal;
+  font-family: Verdana, sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.empty {
+  padding: 30px 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Related */
+.related {
+  border-top: 1px solid var(--line);
+  margin-top: 10px;
+  padding-top: 6px;
+}
+.related h2 { font-size: 1.1rem; margin: 12px 0 8px; }
+.related ul { padding-left: 1.2em; margin: 0; }
+.related li { margin-bottom: 6px; font-size: 0.95rem; }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--card);
+  padding: 18px 0 26px;
+  margin-top: 20px;
+}
+.site-footer p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-family: Verdana, sans-serif;
+}
+
+@media (max-width: 560px) {
+  .site-header { padding: 28px 0 20px; }
+  .site-header h1 { font-size: 1.6rem; }
+}

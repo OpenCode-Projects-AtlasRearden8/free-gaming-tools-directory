@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freebie Directory — Free Companion Tools for Gamers</title>
+  <meta name="description" content="A curated directory of free companion tools for gamers: save managers, achievement and backlog trackers, controller mappers, screenshot organizers, and wiki note-takers. Plain-English verdicts included.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="kicker">Freebie Directory</p>
+      <h1>Free companion tools for gamers</h1>
+      <p class="intro">
+        The games are free. Losing your saves shouldn't be the price of admission.
+        This is a short, hand-curated list of <strong>companion tools</strong> — the stuff
+        that lives next to your games: save managers, achievement and backlog trackers,
+        controller mappers, screenshot organizers, and wiki note-takers.
+      </p>
+      <p class="intro small">
+        Every entry includes <strong>what it checks</strong>, the platform, an
+        <strong>offline-first flag</strong>, and a one-line verdict in plain English.
+        No accounts, no ads, no favorites. See <a href="docs/curation-policy.html">the curation policy</a>.
+      </p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="controls" aria-label="Filters">
+      <div class="searchbox">
+        <label for="search" class="visually-hidden">Search tools</label>
+        <input type="search" id="search" placeholder="Search tools… (e.g. saves, controller, notes)">
+      </div>
+      <div class="filters" id="category-filters" role="group" aria-label="Category filters"></div>
+      <div class="offline-filter">
+        <label>
+          <input type="checkbox" id="offline-only">
+          Offline-first only
+        </label>
+      </div>
+    </section>
+
+    <section id="entries" aria-live="polite"></section>
+
+    <section class="related">
+      <h2>Not what you were looking for?</h2>
+      <ul>
+        <li><strong>free-open-source-games-directory</strong> — free & open-source <em>games themselves</em>, not the tools around them.</li>
+        <li><strong>FFXIV trackers</strong> — game-specific tracker tools for Final Fantasy XIV players.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        Curated and maintained by <strong>Asdale Dynamics, LLC</strong> ·
+        Part of Dylan Asdale's plain-English tools & guides ·
+        MIT licensed · No tracking, no ads, works locally.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
